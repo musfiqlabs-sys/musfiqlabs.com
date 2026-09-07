@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSFIQLABS — Premium AI Automation Agency | AI Voice Agents & CRM Systems</title>
+  <meta name="description" content="MUSFIQLABS builds custom AI voice agents, receptionists, automated lead follow-up, and n8n CRM workflows for high-ticket service businesses. Turn missed leads into booked appointments automatically.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader Screen for Background Sequence -->
+  <div id="loader-overlay" class="loader-overlay" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-glow-ring"></div>
+      <div class="loader-title">INITIALIZING AI WORKSPACE</div>
+      <div class="loader-track">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+      <div class="loader-stats">
+        <span id="loader-percent" class="loader-percent">0%</span>
+        <span id="loader-count" class="loader-count">0 / 240 FRAMES</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Canvas Viewport (Scroll-Driven Video Frame Sequence) -->
+  <div class="bg-canvas-container" id="canvas-container">
+    <canvas id="frame-canvas"></canvas>
+    <div class="bg-vignette-overlay"></div>
+    <div class="bg-ambient-amber-glow"></div>
+  </div>
+
+  <!-- Main Website Container -->
+  <div class="site-wrapper">
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar-wrapper">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo with Crown -->
+        <a href="#hero" class="brand-logo">
+          <div class="brand-crown">
+            <svg width="20" height="16" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 15L4 4L9 9L12 2L15 9L20 4L22 15H2Z" fill="url(#crown-grad)" stroke="#f97316" stroke-width="1.2" stroke-linejoin="round"/>
+              <circle cx="2" cy="4" r="1.5" fill="#f97316"/>
+              <circle cx="12" cy="2" r="1.5" fill="#ffedd5"/>
+              <circle cx="22" cy="4" r="1.5" fill="#f97316"/>
+              <defs>
+                <linearGradient id="crown-grad" x1="12" y1="2" x2="12" y2="15" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#fb923c"/>
+                  <stop offset="1" stop-color="#c2410c"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-info">
+            <span class="brand-text">MUSFIQLABS</span>
+            <span class="brand-tag">AI AUTOMATION</span>
+          </div>
+        </a>
+
+        <!-- Center Nav Links -->
+        <div class="nav-links">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#solutions" class="nav-link">Solutions</a>
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#results" class="nav-link">Results</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#booking" class="nav-link">Book Audit</a>
+        </div>
+
+        <!-- Right Action Button -->
+        <div class="nav-actions">
+          <a href="#booking" class="btn-primary-nav">
+            <span>Book a Call</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-left">
+          
+          <!-- Eyebrow Pill -->
+          <div class="hero-eyebrow">
+            <span class="live-pulse-dot"></span>
+            <span class="eyebrow-text">AI AUTOMATION SYSTEMS BY MUSFIQLABS</span>
+          </div>
+
+          <!-- Main Hero Headline -->
+          <h1 class="hero-title">
+            Turn Missed Leads Into<br>
+            <span class="gradient-text">Booked Appointments</span><br>
+            Automatically.
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="hero-subtitle">
+            I build AI-powered systems that respond to leads, make calls, qualify prospects, follow up automatically, and book appointments — so your business can convert more leads without adding more staff.
+          </p>
+
+          <!-- Target Industries Ribbon -->
+          <div class="industry-ribbon">
+            <span class="ribbon-label">BUILT FOR SERVICE BUSINESSES:</span>
+            <div class="ribbon-tags">
+              <span class="ribbon-tag">HVAC</span>
+              <span class="ribbon-tag">Plumbing</span>
+              <span class="ribbon-tag">Roofing</span>
+              <span class="ribbon-tag">Dentists</span>
+              <span class="ribbon-tag">Med Spas</span>
+              <span class="ribbon-tag">Law Firms</span>
+            </div>
+          </div>
+
+          <!-- Hero CTA Actions -->
+          <div class="hero-cta-group">
+            <a href="#booking" class="btn-primary-hero">
+              <span>Book a Free Automation Audit</span>
+              <div class="btn-shine"></div>
+            </a>
+            <a href="#how-it-works" class="btn-secondary-hero">
+              <span>See How It Works →</span>
+            </a>
+          </div>
+
+          <!-- Live Engineering Badges -->
+          <div class="hero-trust-bar">
+            <div class="trust-item">
+              <span class="trust-icon">⚡</span>
+              <span class="trust-text"><strong>&lt; 60s</strong> Speed-to-Lead</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="trust-icon">📞</span>
+              <span class="trust-text"><strong>Sub-second</strong> Voice Latency</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="trust-icon">⚙️</span>
+              <span class="trust-text"><strong>100% Custom</strong> n8n & CRM</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero: Real-Time AI Automation Dashboard & Live Workflow Interface -->
+        <div class="hero-right">
+          
+          <div class="dashboard-viewport">
+            
+            <!-- Floating Glassmorphism Card 1: AI SALES SYSTEM -->
+            <div class="float-card float-card-top-left" id="card-sales-system">
+              <div class="card-glass-header">
+                <div class="card-identity">
+                  <div class="icon-chip-small">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.2">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  </div>
+                  <span class="card-identity-title">AI SALES SYSTEM</span>
+                </div>
+                <div class="status-indicator-running">
+                  <span class="indicator-glow-dot"></span>
+                  <span class="indicator-label">RUNNING</span>
+                </div>
+              </div>
+
+              <!-- Metrics Row -->
+              <div class="card-metrics-grid">
+                <div class="metric-block">
+                  <span class="metric-val">247</span>
+                  <span class="metric-key">Leads Processed</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-block">
+                  <span class="metric-val highlight-amber">38</span>
+                  <span class="metric-key">Appointments</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-block">
+                  <span class="metric-val">18%</span>
+                  <span class="metric-key">Conversion</span>
+                </div>
+              </div>
+
+              <!-- Subtle Orange Sparkline Graph -->
+              <div class="card-sparkline-wrap">
+                <svg class="sparkline-svg" viewBox="0 0 220 44" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="chart-glow-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#f97316" stop-opacity="0.0"/>
+                    </linearGradient>
+                    <linearGradient id="chart-stroke-grad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#ea580c"/>
+                      <stop offset="50%" stop-color="#f97316"/>
+                      <stop offset="100%" stop-color="#fbbf24"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,36 Q20,38 40,28 T80,24 T120,18 T160,12 T190,16 T220,4 L220,44 L0,44 Z" fill="url(#chart-glow-grad)"/>
+                  <path d="M0,36 Q20,38 40,28 T80,24 T120,18 T160,12 T190,16 T220,4" fill="none" stroke="url(#chart-stroke-grad)" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="220" cy="4" r="3.5" fill="#fbbf24" stroke="#ffffff" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="demo-caption-tag">DEMO TELEMETRY STREAM</div>
+            </div>
+
+            <!-- Central Futuristic Real-Time Workflow Interface -->
+            <div class="workflow-interface" id="hero-workflow-engine">
+              
+              <div class="workflow-header-bar">
+                <div class="workflow-window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="workflow-title-tag">
+                  <span class="tag-mono">LIVE_PIPELINE // INSTANT_DISPATCH</span>
+                </div>
+                <div class="workflow-sync-chip">
+                  <span class="sync-pulse"></span>
+                  <span>SYNCED</span>
+                </div>
+              </div>
+
+              <!-- The 5 Workflow Stages -->
+              <div class="workflow-stages-container">
+
+                <!-- STAGE 1: NEW LEAD -->
+                <div class="stage-node stage-new-lead active-stage" id="stage-1">
+                  <div class="stage-badge-col">
+                    <div class="stage-step-num">01</div>
+                    <div class="stage-status-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="8.5" cy="7" r="4"></circle>
+                        <line x1="20" y1="8" x2="20" y2="14"></line>
+                        <line x1="23" y1="11" x2="17" y2="11"></line>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="stage-details">
+                    <div class="stage-tag-row">
+                      <span class="stage-name">NEW LEAD</span>
+                      <span class="stage-time-chip">0.04s ago</span>
+                    </div>
+                    <div class="stage-main-text">Inbound Inquiry · Sarah M.</div>
+                    <div class="stage-sub-text">"AC stopped cooling upstairs, need immediate tech."</div>
+                  </div>
+                </div>
+
+                <!-- Animated Connector 1 -->
+                <div class="stage-connector">
+                  <div class="connector-line">
+                    <div class="connector-pulse pulse-1"></div>
+                  </div>
+                  <div class="connector-arrow">↓</div>
+                </div>
+
+                <!-- STAGE 2: AI VOICE AGENT -->
+                <div class="stage-node stage-ai-agent active-stage-glow" id="stage-2">
+                  <div class="stage-badge-col">
+                    <div class="stage-step-num highlight-num">02</div>
+                    <div class="stage-status-icon pulse-agent-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="stage-details">
+                    <div class="stage-tag-row">
+                      <span class="stage-name highlight-text">AI VOICE AGENT</span>
+                      <span class="stage-call-status">
+                        <span class="audio-wave-anim">
+                          <span></span><span></span><span></span><span></span>
+                        </span>
+                        <span>00:38</span>
+                      </span>
+                    </div>
+                    <div class="stage-main-text">Calling Sarah...</div>
+                    <div class="stage-sub-text">"Hi Sarah, calling from Apex Comfort regarding your AC service request..."</div>
+                  </div>
+                </div>
+
+                <!-- Animated Connector 2 -->
+                <div class="stage-connector">
+                  <div class="connector-line">
+                    <div class="connector-pulse pulse-2"></div>
+                  </div>
+                  <div class="connector-arrow">↓</div>
+                </div>
+
+                <!-- STAGE 3: LEAD QUALIFIED -->
+                <div class="stage-node stage-qualified" id="stage-3">
+                  <div class="stage-badge-col">
+                    <div class="stage-step-num">03</div>
+                    <div class="stage-status-icon icon-green">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="stage-details">
+                    <div class="stage-tag-row">
+                      <span class="stage-name">LEAD QUALIFIED</span>
+                      <span class="badge-pill-green">HIGH INTENT</span>
+                    </div>
+                    <div class="stage-main-text">Interested in consultation</div>
+                    <div class="stage-sub-text">Homeowner confirmed • Replacement unit quote requested</div>
+                  </div>
+                </div>
+
+                <!-- Animated Connector 3 -->
+                <div class="stage-connector">
+                  <div class="connector-line">
+                    <div class="connector-pulse pulse-3"></div>
+                  </div>
+                  <div class="connector-arrow">↓</div>
+                </div>
+
+                <!-- STAGE 4: APPOINTMENT BOOKED -->
+                <div class="stage-node stage-booked active-glow-gold" id="stage-4">
+                  <div class="stage-badge-col">
+                    <div class="stage-step-num highlight-num-gold">04</div>
+                    <div class="stage-status-icon icon-gold">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="stage-details">
+                    <div class="stage-tag-row">
+                      <span class="stage-name highlight-gold">APPOINTMENT BOOKED</span>
+                      <span class="badge-pill-gold">CALENDAR SYNCED</span>
+                    </div>
+                    <div class="stage-main-text font-bold">Tuesday · 2:30 PM</div>
+                    <div class="stage-sub-text">Dispatch slot reserved • SMS confirmation sent to customer</div>
+                  </div>
+                </div>
+
+                <!-- Animated Connector 4 -->
+                <div class="stage-connector">
+                  <div class="connector-line">
+                    <div class="connector-pulse pulse-4"></div>
+                  </div>
+                  <div class="connector-arrow">↓</div>
+                </div>
+
+                <!-- STAGE 5: CRM UPDATED -->
+                <div class="stage-node stage-crm" id="stage-5">
+                  <div class="stage-badge-col">
+                    <div class="stage-step-num">05</div>
+                    <div class="stage-status-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2.5">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="stage-details">
+                    <div class="stage-tag-row">
+                      <span class="stage-name">CRM UPDATED</span>
+                      <span class="badge-pill-neutral">ZERO MANUAL ENTRY</span>
+                    </div>
+                    <div class="stage-main-text">HubSpot / GoHighLevel Pipeline Synced</div>
+                    <div class="stage-sub-text">Call audio recording, AI transcription & summary attached</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Floating Glassmorphism Card 2: TODAY'S ACTIVITY -->
+            <div class="float-card float-card-bottom-right" id="card-todays-activity">
+              <div class="card-glass-header">
+                <div class="card-identity">
+                  <div class="icon-chip-small chip-amber">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <span class="card-identity-title">TODAY'S ACTIVITY</span>
+                </div>
+                <div class="time-live-chip">
+                  <span class="clock-icon">🕒</span>
+                  <span id="live-time-ticker">09:41 AM</span>
+                </div>
+              </div>
+
+              <!-- Activity Metric Rows -->
+              <div class="activity-metric-list">
+                
+                <div class="activity-item">
+                  <div class="activity-item-left">
+                    <span class="activity-dot dot-blue"></span>
+                    <span class="activity-name">32 Leads Contacted</span>
+                  </div>
+                  <span class="activity-tag">&lt; 45s avg</span>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-item-left">
+                    <span class="activity-dot dot-green"></span>
+                    <span class="activity-name">11 Qualified</span>
+                  </div>
+                  <span class="activity-tag tag-green">34.3%</span>
+                </div>
+
+                <div class="activity-item highlight-activity">
+                  <div class="activity-item-left">
+                    <span class="activity-dot dot-amber"></span>
+                    <span class="activity-name font-bold">6 Appointments Booked</span>
+                  </div>
+                  <span class="activity-tag tag-amber">+100% Auto</span>
+                </div>
+
+              </div>
+              <div class="demo-caption-tag">SIMULATED SERVICE PIPELINE</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4 CORE CAPABILITIES / FEATURE CARDS SECTION -->
+    <section class="features-section" id="solutions">
+      <div class="section-container">
+        
+        <div class="section-header-centered">
+          <div class="section-badge">CORE CAPABILITIES</div>
+          <h2 class="section-title">Built To Replace Friction.<br><span class="gradient-text">Engineered For Revenue.</span></h2>
+          <p class="section-subtitle">
+            We don't offer generic templates. Every voice agent, webhook, and CRM pipeline is architected specifically around your sales workflow.
+          </p>
+        </div>
+
+        <div class="features-4col-grid">
+          
+          <!-- Card 1: AI Voice Agents -->
+          <div class="feature-core-card">
+            <div class="feature-card-glow"></div>
+            <div class="feature-card-header">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" y1="19" x2="12" y2="23"></line>
+                  <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+              </div>
+              <span class="card-num-watermark">01</span>
+            </div>
+            
+            <h3 class="feature-card-title">AI Voice Agents</h3>
+            <p class="feature-card-desc">
+              AI receptionists and appointment setters that handle inbound and outbound calls.
+            </p>
+
+            <div class="feature-specs-list">
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Natural conversational human inflection</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Sub-500ms voice response latency</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Instant calendar booking & live call transfer</span>
+              </div>
+            </div>
+
+            <div class="feature-footer-tag">INBOUND & OUTBOUND VOIP</div>
+          </div>
+
+          <!-- Card 2: Lead Follow-Up -->
+          <div class="feature-core-card">
+            <div class="feature-card-glow"></div>
+            <div class="feature-card-header">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <line x1="9" y1="10" x2="15" y2="10"></line>
+                </svg>
+              </div>
+              <span class="card-num-watermark">02</span>
+            </div>
+            
+            <h3 class="feature-card-title">Lead Follow-Up</h3>
+            <p class="feature-card-desc">
+              Automatically follow up with leads across your communication channels.
+            </p>
+
+            <div class="feature-specs-list">
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Speed-to-lead response in under 45 seconds</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Omnichannel SMS, WhatsApp & Email cadence</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Smart re-engagement for stalled quotes</span>
+              </div>
+            </div>
+
+            <div class="feature-footer-tag">MULTI-CHANNEL SPEED-TO-LEAD</div>
+          </div>
+
+          <!-- Card 3: CRM Automation -->
+          <div class="feature-core-card">
+            <div class="feature-card-glow"></div>
+            <div class="feature-card-header">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="card-num-watermark">03</span>
+            </div>
+            
+            <h3 class="feature-card-title">CRM Automation</h3>
+            <p class="feature-card-desc">
+              Capture, qualify, update, and route leads without manual data entry.
+            </p>
+
+            <div class="feature-specs-list">
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>GoHighLevel, HubSpot, Salesforce & Pipedrive</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Full call transcription & AI note synthesis</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Automated pipeline stage progression</span>
+              </div>
+            </div>
+
+            <div class="feature-footer-tag">ZERO-TOUCH PIPELINE HYGIENE</div>
+          </div>
+
+          <!-- Card 4: Business Automation -->
+          <div class="feature-core-card">
+            <div class="feature-card-glow"></div>
+            <div class="feature-card-header">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="card-num-watermark">04</span>
+            </div>
+            
+            <h3 class="feature-card-title">Business Automation</h3>
+            <p class="feature-card-desc">
+              Connect your tools and eliminate repetitive operational work.
+            </p>
+
+            <div class="feature-specs-list">
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Custom n8n & API event-driven webhooks</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Automated dispatch & technician notification</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-check">✓</span>
+                <span>Self-healing workflows with error redundancy</span>
+              </div>
+            </div>
+
+            <div class="feature-footer-tag">CUSTOM N8N & REST APIS</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE WORKFLOW & VOICE AGENT SIMULATOR -->
+    <section class="simulator-section" id="how-it-works">
+      <div class="section-container">
+        
+        <div class="simulator-wrapper">
+          <div class="simulator-grid">
+            
+            <!-- Left: Interactive Voice Scenario Controller -->
+            <div class="simulator-left">
+              <div class="section-badge">INTERACTIVE SIMULATION</div>
+              <h2 class="simulator-title">
+                Experience How The System<br>
+                <span class="gradient-text">Handles Real Calls.</span>
+              </h2>
+              <p class="simulator-desc">
+                Select a real-world service scenario to see how our custom AI voice agents qualify intent, handle objections, and book directly onto your team's calendar.
+              </p>
+
+              <!-- Scenario Selector Buttons -->
+              <div class="scenario-buttons-list">
+                
+                <button type="button" class="scenario-btn active" data-scenario="hvac">
+                  <div class="scenario-btn-icon">❄️</div>
+                  <div class="scenario-btn-info">
+                    <span class="scenario-btn-title">HVAC Emergency Repair</span>
+                    <span class="scenario-btn-sub">Inbound Call · Dispatch Qualification</span>
+                  </div>
+                  <span class="scenario-active-pill">ACTIVE</span>
+                </button>
+
+                <button type="button" class="scenario-btn" data-scenario="medspa">
+                  <div class="scenario-btn-icon">✨</div>
+                  <div class="scenario-btn-info">
+                    <span class="scenario-btn-title">Med Spa Consultation</span>
+                    <span class="scenario-btn-sub">Speed-to-Lead Follow-up · Treatment Booking</span>
+                  </div>
+                  <span class="scenario-active-pill">ACTIVE</span>
+                </button>
+
+                <button type="button" class="scenario-btn" data-scenario="roofing">
+                  <div class="scenario-btn-icon">🏠</div>
+                  <div class="scenario-btn-info">
+                    <span class="scenario-btn-title">Roofing Estimate Setter</span>
+                    <span class="scenario-btn-sub">Outbound Speed-to-Lead · Inspection Setter</span>
+                  </div>
+                  <span class="scenario-active-pill">ACTIVE</span>
+                </button>
+
+                <button type="button" class="scenario-btn" data-scenario="legal">
+                  <div class="scenario-btn-icon">⚖️</div>
+                  <div class="scenario-btn-info">
+                    <span class="scenario-btn-title">Law Firm Case Intake</span>
+                    <span class="scenario-btn-sub">24/7 Screening · Conflict & Retainer Check</span>
+                  </div>
+                  <span class="scenario-active-pill">ACTIVE</span>
+                </button>
+
+              </div>
+            </div>
+
+            <!-- Right: Live Simulated Call Terminal & Transcript -->
+            <div class="simulator-right">
+              
+              <div class="call-terminal">
+                
+                <!-- Terminal Header -->
+                <div class="terminal-header">
+                  <div class="terminal-caller-profile">
+                    <div class="caller-avatar" id="terminal-avatar">HV</div>
+                    <div class="caller-meta">
+                      <span class="caller-name" id="terminal-caller-name">Sarah Miller (HVAC Inbound)</span>
+                      <span class="caller-status-text">
+                        <span class="live-dot-green"></span>
+                        <span id="terminal-call-duration">Call Duration: 00:48</span> · 
+                        <span class="latency-metric">Latency: 380ms</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="terminal-audio-controls">
+                    <div class="waveform-box">
+                      <span class="wave-bar wb-1"></span>
+                      <span class="wave-bar wb-2"></span>
+                      <span class="wave-bar wb-3"></span>
+                      <span class="wave-bar wb-4"></span>
+                      <span class="wave-bar wb-5"></span>
+                      <span class="wave-bar wb-6"></span>
+                    </div>
+                    <span class="terminal-badge-ai">AI VOICE ENGINE</span>
+                  </div>
+                </div>
+
+                <!-- Simulated Transcript Messages -->
+                <div class="terminal-body" id="terminal-transcript-stream">
+                  <!-- Injected dynamically by app.js -->
+                </div>
+
+                <!-- Terminal Actions Output -->
+                <div class="terminal-footer">
+                  <div class="terminal-action-row">
+                    <div class="action-event">
+                      <span class="event-icon">📅</span>
+                      <span class="event-text" id="terminal-booking-event">Appointment Booked: Tuesday 2:30 PM</span>
+                    </div>
+                    <div class="action-status-badge">AUTO-CONFIRMED</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SYSTEM PERFORMANCE & RESULTS SECTION -->
+    <section class="results-section" id="results">
+      <div class="section-container">
+        
+        <div class="section-header-centered">
+          <div class="section-badge">PERFORMANCE METRICS</div>
+          <h2 class="section-title">Why Speed & Availability<br><span class="gradient-text">Win High-Ticket Jobs.</span></h2>
+          <p class="section-subtitle">
+            78% of customers buy from the first business that responds. Our automation ensures your company responds instantly, every hour of the day.
+          </p>
+        </div>
+
+        <!-- Metric Cards Grid -->
+        <div class="results-metrics-grid">
+          
+          <div class="result-card">
+            <div class="result-number gradient-text">&lt; 45s</div>
+            <div class="result-title">Speed-to-Lead Response</div>
+            <p class="result-desc">
+              Industry average is over 4 hours. Our AI calls or messages every inbound lead in under 45 seconds while buyer intent is at its peak.
+            </p>
+            <div class="result-footer-stat">Vs 4.2h manual avg</div>
+          </div>
+
+          <div class="result-card">
+            <div class="result-number gradient-text">24/7/365</div>
+            <div class="result-title">Zero Missed Inbound Calls</div>
+            <p class="result-desc">
+              Capture high-margin after-hours emergency calls and weekend leads that would have otherwise gone directly to your competitors.
+            </p>
+            <div class="result-footer-stat">100% call capture rate</div>
+          </div>
+
+          <div class="result-card">
+            <div class="result-number gradient-text">3.2x</div>
+            <div class="result-title">Lead-to-Booked Multiplier</div>
+            <p class="result-desc">
+              By eliminating friction and delayed voicemail tag, client systems consistently book over triple the appointments from the same ad spend.
+            </p>
+            <div class="result-footer-stat">From existing web traffic</div>
+          </div>
+
+          <div class="result-card">
+            <div class="result-number gradient-text">0 hrs</div>
+            <div class="result-title">Manual CRM Data Entry</div>
+            <p class="result-desc">
+              Every contact, call summary, transcript, and appointment syncs into your CRM with zero manual friction or administrative overhead.
+            </p>
+            <div class="result-footer-stat">Automated pipeline sync</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE / HOW WE BUILD -->
+    <section class="architecture-section" id="about">
+      <div class="section-container">
+        
+        <div class="architecture-card">
+          <div class="arch-grid">
+            
+            <div class="arch-content">
+              <div class="section-badge">ENGINEERING PHILOSOPHY</div>
+              <h2 class="arch-title">
+                Custom n8n Architecture.<br>
+                <span class="gradient-text">Zero Fragile Templates.</span>
+              </h2>
+              <p class="arch-desc">
+                Most agencies give you cookie-cutter Zapier templates that break on the first edge case. <strong>MUSFIQLABS</strong> designs robust, self-healing n8n automation pipelines with custom prompt safeguards, error fallbacks, and human handoff triggers.
+              </p>
+
+              <div class="arch-points-list">
+                <div class="arch-point">
+                  <div class="point-bullet">01</div>
+                  <div class="point-text">
+                    <strong>Custom LLM Guardrails:</strong> Trained specifically on your pricing rules, service areas, and qualification logic without hallucination risk.
+                  </div>
+                </div>
+
+                <div class="arch-point">
+                  <div class="point-bullet">02</div>
+                  <div class="point-text">
+                    <strong>Smart Human Handoff:</strong> When a high-value prospect requests a live human or complex negotiation, the AI transfers the call instantly to your phone.
+                  </div>
+                </div>
+
+                <div class="arch-point">
+                  <div class="point-bullet">03</div>
+                  <div class="point-text">
+                    <strong>Enterprise Stack:</strong> Powered by ultra-low-latency voice synthesis, n8n self-hosted orchestrators, Twilio telecom, and direct REST CRM endpoints.
+                  </div>
+                </div>
+              </div>
+
+              <a href="#booking" class="btn-primary-hero" style="margin-top: 28px; width: fit-content;">
+                <span>Discuss Your Automation Architecture</span>
+                <div class="btn-shine"></div>
+              </a>
+            </div>
+
+            <div class="arch-visual-col">
+              <div class="code-terminal-box">
+                <div class="terminal-bar-top">
+                  <div class="dots-row">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <span class="file-name-tag">n8n_voice_workflow.json</span>
+                </div>
+                <pre class="code-preview"><code><span class="c-dim">// MUSFIQLABS Lead Intake & Voice Dispatch Pipeline</span>
+{
+  <span class="c-prop">"trigger"</span>: <span class="c-str">"webhook:inbound_lead"</span>,
+  <span class="c-prop">"latency_sla"</span>: <span class="c-num">450</span>,
+  <span class="c-prop">"pipeline"</span>: [
+    {
+      <span class="c-prop">"node"</span>: <span class="c-str">"AI_Intent_Classifier"</span>,
+      <span class="c-prop">"model"</span>: <span class="c-str">"claude-3.5-sonnet-telecom"</span>,
+      <span class="c-prop">"action"</span>: <span class="c-str">"extract_urgency_and_service_type"</span>
+    },
+    {
+      <span class="c-prop">"node"</span>: <span class="c-str">"Voice_Agent_Outbound"</span>,
+      <span class="c-prop">"voice_id"</span>: <span class="c-str">"voice_natural_receptionist"</span>,
+      <span class="c-prop">"calendar_binding"</span>: <span class="c-str">"google_calendar_dispatch"</span>
+    },
+    {
+      <span class="c-prop">"node"</span>: <span class="c-str">"CRM_Two_Way_Sync"</span>,
+      <span class="c-prop">"targets"</span>: [<span class="c-str">"GoHighLevel"</span>, <span class="c-str">"HubSpot"</span>],
+      <span class="c-prop">"record_audio"</span>: <span class="c-bool">true</span>,
+      <span class="c-prop">"sms_confirmation"</span>: <span class="c-bool">true</span>
+    }
+  ]
+}</code></pre>
+                <div class="terminal-bar-bottom">
+                  <span class="status-live-node">● WORKFLOW STATUS: ACTIVE & MONITORING</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT & PRICING SECTION -->
+    <section class="pricing-section" id="pricing">
+      <div class="section-container">
+        
+        <div class="section-header-centered">
+          <div class="section-badge">ENGAGEMENT MODEL</div>
+          <h2 class="section-title">Transparent Implementation.<br><span class="gradient-text">Zero Waste.</span></h2>
+          <p class="section-subtitle">
+            We operate on custom project deployments and fully managed systems designed to pay for themselves in booked jobs.
+          </p>
+        </div>
+
+        <div class="pricing-cards-grid">
+          
+          <!-- Card 1: Free Audit -->
+          <div class="pricing-card">
+            <div class="pricing-tier-tag">STEP 1</div>
+            <h3 class="tier-name">Automation Audit</h3>
+            <div class="tier-price-row">
+              <span class="price-val">$0</span>
+              <span class="price-period">/ 30-min strategy call</span>
+            </div>
+            <p class="tier-desc">
+              We audit your current lead pipeline, identify where leads drop off, and design your custom voice & CRM architecture blueprint.
+            </p>
+            <ul class="tier-features">
+              <li>✓ Speed-to-lead latency analysis</li>
+              <li>✓ Missed call revenue leak calculation</li>
+              <li>✓ Custom AI system roadmap</li>
+              <li>✓ No high-pressure sales pitches</li>
+            </ul>
+            <a href="#booking" class="btn-outline-tier">Book Free Audit</a>
+          </div>
+
+          <!-- Card 2: Turnkey Build (Featured) -->
+          <div class="pricing-card featured-tier">
+            <div class="featured-glow-edge"></div>
+            <div class="featured-badge-top">RECOMMENDED FOR SERVICE TEAMS</div>
+            <div class="pricing-tier-tag">STEP 2</div>
+            <h3 class="tier-name">Turnkey Custom Build</h3>
+            <div class="tier-price-row">
+              <span class="price-custom">Custom Scope</span>
+              <span class="price-period">/ One-time build</span>
+            </div>
+            <p class="tier-desc">
+              Full end-to-end engineering of your custom AI Voice Agent, multi-channel lead follow-up, n8n orchestration, and CRM integration.
+            </p>
+            <ul class="tier-features">
+              <li>✓ Inbound & Outbound AI Voice Agent</li>
+              <li>✓ Sub-500ms voice tuning & scenario prompt training</li>
+              <li>✓ GoHighLevel / HubSpot / Salesforce CRM 2-way sync</li>
+              <li>✓ SMS & Email speed-to-lead sequences</li>
+              <li>✓ Rigorous multi-scenario stress testing</li>
+              <li>✓ Team training & handoff walkthrough</li>
+            </ul>
+            <a href="#booking" class="btn-primary-hero" style="width: 100%; justify-content: center;">
+              <span>Schedule Audit & Proposal</span>
+              <div class="btn-shine"></div>
+            </a>
+          </div>
+
+          <!-- Card 3: Managed Tuning & Retainer -->
+          <div class="pricing-card">
+            <div class="pricing-tier-tag">STEP 3</div>
+            <h3 class="tier-name">Managed Optimization</h3>
+            <div class="tier-price-row">
+              <span class="price-custom">Monthly Retainer</span>
+              <span class="price-period">/ Ongoing support</span>
+            </div>
+            <p class="tier-desc">
+              Continuous monitoring, edge-case prompt expansion, new service line scripting, voice latency tuning, and 99.9% uptime maintenance.
+            </p>
+            <ul class="tier-features">
+              <li>✓ Weekly transcript review & AI prompt refinement</li>
+              <li>✓ Ongoing n8n infrastructure maintenance</li>
+              <li>✓ New seasonal promotion scripts</li>
+              <li>✓ Priority engineering support SLA</li>
+            </ul>
+            <a href="#booking" class="btn-outline-tier">Inquire About Retainers</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OFFICIAL REAL CALENDLY LIVE BOOKING SECTION -->
+    <section class="booking-section" id="booking">
+      <div class="section-container">
+        
+        <div class="booking-card">
+          <div class="booking-glow-orb"></div>
+          <div class="booking-grid">
+            
+            <!-- Left Side: Copy, Benefits & Trust Text -->
+            <div class="booking-left">
+              
+              <div class="section-badge">FREE AI AUTOMATION AUDIT</div>
+              
+              <h2 class="booking-headline">
+                Let's Find What You Can<br>
+                <span class="gradient-text">Automate</span>
+              </h2>
+
+              <p class="booking-subheadline">
+                Book a free 30-minute automation audit. We'll identify where AI can save your team time, capture more leads, and turn more opportunities into booked appointments.
+              </p>
+
+              <!-- Three Core Benefits List -->
+              <div class="booking-benefits-list">
+                
+                <div class="booking-benefit-item">
+                  <div class="benefit-check-box">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="benefit-text">
+                    Identify repetitive processes worth automating
+                  </div>
+                </div>
+
+                <div class="booking-benefit-item">
+                  <div class="benefit-check-box">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="benefit-text">
+                    Find opportunities to capture and follow up with more leads
+                  </div>
+                </div>
+
+                <div class="booking-benefit-item">
+                  <div class="benefit-check-box">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="benefit-text">
+                    Get practical AI automation recommendations
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Trust Reassurance Box -->
+              <div class="booking-trust-box">
+                <div class="trust-badge-shield">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="trust-quote-text">
+                  "No pressure. No complicated sales pitch. Just a practical conversation about your business."
+                </div>
+              </div>
+
+              <!-- Direct Call Details -->
+              <div class="booking-meta-chips">
+                <span class="meta-chip">⏱️ 30-Minute Video / Call</span>
+                <span class="meta-chip">🔒 100% Confidential</span>
+                <span class="meta-chip">💡 Custom Architecture Plan</span>
+              </div>
+
+            </div>
+
+            <!-- Right Side: Official Real Calendly Inline Embed in Glassmorphism Container -->
+            <div class="booking-right">
+              
+              <div class="calendly-glass-container">
+                
+                <div class="calendly-top-bar">
+                  <div class="calendly-label-wrap">
+                    <span class="live-dot-amber"></span>
+                    <span class="calendly-label-title">Choose a time that works for you</span>
+                  </div>
+                  <div class="calendly-sync-tag">LIVE AVAILABILITY</div>
+                </div>
+
+                <!-- Calendly Inline Widget Embed -->
+                <div class="calendly-embed-wrapper">
+                  <div 
+                    class="calendly-inline-widget" 
+                    data-url="https://calendly.com/musfiqlabs/30min" 
+                    style="min-width:320px;height:700px;width:100%;">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="section-container">
+        <div class="footer-top-row">
+          
+          <div class="footer-brand-col">
+            <a href="#hero" class="brand-logo">
+              <div class="brand-crown">
+                <svg width="20" height="16" viewBox="0 0 24 18" fill="none">
+                  <path d="M2 15L4 4L9 9L12 2L15 9L20 4L22 15H2Z" fill="url(#crown-grad-footer)" stroke="#f97316" stroke-width="1.2" stroke-linejoin="round"/>
+                  <circle cx="2" cy="4" r="1.5" fill="#f97316"/>
+                  <circle cx="12" cy="2" r="1.5" fill="#ffedd5"/>
+                  <circle cx="22" cy="4" r="1.5" fill="#f97316"/>
+                  <defs>
+                    <linearGradient id="crown-grad-footer" x1="12" y1="2" x2="12" y2="15" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#fb923c"/>
+                      <stop offset="1" stop-color="#c2410c"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <span class="brand-text">MUSFIQLABS</span>
+            </a>
+            <p class="footer-brand-tagline">
+              Premium AI automation systems, voice agents, and CRM workflows for high-ticket service businesses.
+            </p>
+          </div>
+
+          <div class="footer-links-grid">
+            
+            <div class="footer-col">
+              <span class="footer-col-title">SOLUTIONS</span>
+              <a href="#solutions">AI Voice Agents</a>
+              <a href="#solutions">Lead Follow-Up Systems</a>
+              <a href="#solutions">CRM Automation</a>
+              <a href="#solutions">n8n Custom Workflows</a>
+            </div>
+
+            <div class="footer-col">
+              <span class="footer-col-title">INDUSTRIES</span>
+              <a href="#how-it-works">HVAC & Plumbing</a>
+              <a href="#how-it-works">Roofing Contractors</a>
+              <a href="#how-it-works">Med Spas & Aesthetics</a>
+              <a href="#how-it-works">Law Firms & Legal</a>
+            </div>
+
+            <div class="footer-col">
+              <span class="footer-col-title">COMPANY</span>
+              <a href="#hero">Home</a>
+              <a href="#how-it-works">How It Works</a>
+              <a href="#results">Results</a>
+              <a href="#about">About</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#booking">Book Audit</a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-row">
+          <div class="footer-copy">
+            © 2026 MUSFIQLABS. All rights reserved. Custom AI Automation Systems.
+          </div>
+          <div class="footer-legal">
+            <span class="system-status-indicator">● ALL SYSTEMS OPERATIONAL (99.9% UPTIME)</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Calendly Official Widget Script -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="app.js"></script>
+</body>
+</html>
