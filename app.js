@@ -455,8 +455,14 @@
     setInterval(updateTime, 30000);
   }
 
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
+  const mobileDrawerBackdrop = document.getElementById('mobile-drawer-backdrop');
+  const mobileDrawerClose = document.getElementById('mobile-drawer-close');
+
   /**
-   * Active Nav Link on Scroll
+   * Active Nav Link on Scroll (Desktop & Mobile)
    */
   function updateActiveNav() {
     const sections = ['hero', 'solutions', 'how-it-works', 'results', 'about', 'pricing', 'booking'];
@@ -475,10 +481,85 @@
               link.classList.remove('active');
             }
           });
+          mobileNavLinks.forEach((link) => {
+            if (link.getAttribute('href') === `#${secId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
           break;
         }
       }
     }
+  }
+
+  /**
+   * Mobile Navigation Drawer Controller
+   */
+  function initMobileMenu() {
+    if (!mobileMenuToggle || !mobileNavDrawer) return;
+
+    function openMenu() {
+      mobileNavDrawer.classList.add('open');
+      mobileNavDrawer.setAttribute('aria-hidden', 'false');
+      mobileMenuToggle.classList.add('active');
+      mobileMenuToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileNavDrawer.classList.remove('open');
+      mobileNavDrawer.setAttribute('aria-hidden', 'true');
+      mobileMenuToggle.classList.remove('active');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    function toggleMenu() {
+      if (mobileNavDrawer.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    mobileMenuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    if (mobileDrawerClose) {
+      mobileDrawerClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeMenu();
+      });
+    }
+
+    if (mobileDrawerBackdrop) {
+      mobileDrawerBackdrop.addEventListener('click', closeMenu);
+    }
+
+    // Close when clicking any mobile nav link or mobile CTA
+    document.querySelectorAll('.mobile-nav-link, .btn-mobile-cta').forEach((link) => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNavDrawer.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+
+    // Close drawer on desktop resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024 && mobileNavDrawer.classList.contains('open')) {
+        closeMenu();
+      }
+    }, { passive: true });
   }
 
   /**
@@ -488,7 +569,7 @@
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href').substring(1);
-        if (targetId === 'audit-modal') {
+        if (targetId === 'audit-modal' || !targetId) {
           return;
         }
 
@@ -600,6 +681,7 @@
   preloadAllFrames();
   initScenarioSelector();
   initLiveClock();
+  initMobileMenu();
   initSmoothScroll();
   initModal();
   initPipelineCycling();
