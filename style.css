@@ -342,6 +342,28 @@ a, button {
   text-decoration: none;
 }
 
+.brand-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
+  mix-blend-mode: lighten;
+  transition: transform var(--transition-normal), filter var(--transition-normal);
+  filter: drop-shadow(0 0 12px rgba(0, 102, 255, 0.28));
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 18px rgba(0, 160, 255, 0.5));
+}
+
+.footer-logo-img {
+  height: 50px;
+  max-width: 240px;
+  mix-blend-mode: lighten;
+}
+
 .brand-crown {
   display: flex;
   align-items: center;
@@ -2392,6 +2414,42 @@ a, button {
   border-radius: var(--radius-full);
 }
 
+.meta-chip-link {
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.meta-chip-link:hover {
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.35);
+  color: var(--accent-orange-light);
+}
+
+.booking-social-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.booking-social-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.booking-social-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* Right Column: Calendly Glass Container */
 .booking-right {
   display: flex;
@@ -2497,6 +2555,70 @@ a, button {
   color: var(--text-secondary);
   line-height: 1.6;
   max-width: 320px;
+}
+
+/* Social Media & Contact Link Styles */
+.social-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.social-icon-btn:hover {
+  background: rgba(249, 115, 22, 0.15);
+  border-color: var(--border-accent);
+  color: var(--accent-orange-light);
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(249, 115, 22, 0.3);
+}
+
+.social-icon-btn:focus-visible {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 2px;
+}
+
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.footer-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  margin-top: 2px;
+}
+
+.footer-email-link:hover {
+  color: var(--accent-orange);
+}
+
+.footer-email-icon {
+  color: var(--accent-orange);
+}
+
+.mobile-social-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 0;
 }
 
 .footer-links-grid {
